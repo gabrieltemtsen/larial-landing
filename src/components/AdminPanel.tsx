@@ -47,17 +47,18 @@ export function AdminPanel() {
   const [pin, setPin] = useState("");
   const [authed, setAuthed] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [saving, setSaving] = useState(false);
+  const [publishing, setPublishing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [draftStatus, setDraftStatus] = useState<string | null>(null);
 
   const [settings, setSettings] = useState<Settings | null>(null);
   const [services, setServices] = useState<Service[]>([]);
   const [jobs, setJobs] = useState<Job[]>([]);
 
-  const canSave = useMemo(
-    () => authed && !!settings && !saving,
-    [authed, settings, saving]
+  const canPublish = useMemo(
+    () => authed && !!settings && !publishing,
+    [authed, settings, publishing]
   );
 
   useEffect(() => {
@@ -65,6 +66,56 @@ export function AdminPanel() {
     const t = setTimeout(() => setSuccess(null), 5000);
     return () => clearTimeout(t);
   }, [success]);
+
+  useEffect(() => {
+    if (!draftStatus) return;
+    const t = setTimeout(() => setDraftStatus(null), 5000);
+    return () => clearTimeout(t);
+  }, [draftStatus]);
+
+  function draftKey(p: string) {
+    return `larial_admin_draft_v1:${p}`;
+  }
+
+  function saveDraft(p: string) {
+    if (!settings) return;
+    const payload = {
+      savedAt: new Date().toISOString(),
+      settings,
+      services,
+      jobs,
+    };
+    localStorage.setItem(draftKey(p), JSON.stringify(payload));
+    setDraftStatus("Draft saved on this device.");
+  }
+
+  function loadDraft(p: string) {
+    const raw = localStorage.getItem(draftKey(p));
+    if (!raw) {
+      setDraftStatus("No draft found on this device.");
+      return;
+    }
+
+    try {
+      const d = JSON.parse(raw) as {
+        savedAt: string;
+        settings: Settings;
+        services: Service[];
+        jobs: Job[];
+      };
+      setSettings(d.settings);
+      setServices(d.services);
+      setJobs(d.jobs);
+      setDraftStatus(`Draft loaded (saved ${new Date(d.savedAt).toLocaleString()}).`);
+    } catch {
+      setDraftStatus("Draft was corrupted. Please re-create it.");
+    }
+  }
+
+  function clearDraft(p: string) {
+    localStorage.removeItem(draftKey(p));
+    setDraftStatus("Draft cleared.");
+  }
 
   async function authAndLoad(p: string) {
     setError(null);
@@ -97,6 +148,10 @@ export function AdminPanel() {
       setJobs(data.jobs);
       setAuthed(true);
       setSuccess("Loaded");
+
+      // If a draft exists, tell them.
+      const raw = localStorage.getItem(draftKey(p));
+      if (raw) setDraftStatus("Draft found on this device (click Load Draft).");
     } catch (e: unknown) {
       setAuthed(false);
       setError(e instanceof Error ? e.message : "Failed");
@@ -105,12 +160,12 @@ export function AdminPanel() {
     }
   }
 
-  async function saveAll() {
+  async function publishAll() {
     if (!settings) return;
 
     setError(null);
     setSuccess(null);
-    setSaving(true);
+    setPublishing(true);
 
     try {
       const res = await fetch("/api/admin/save", {
@@ -122,16 +177,18 @@ export function AdminPanel() {
         body: JSON.stringify({ settings, services, jobs }),
       });
 
+      const j = await res.json().catch(() => null);
+
       if (!res.ok) {
-        const j = await res.json().catch(() => null);
-        throw new Error(j?.error || "Save failed");
+        throw new Error(j?.error || "Publish failed");
       }
 
-      setSuccess("Saved! Vercel will redeploy shortly.");
+      clearDraft(pin);
+      setSuccess("Published! Vercel will redeploy shortly.");
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "Save failed");
+      setError(e instanceof Error ? e.message : "Publish failed");
     } finally {
-      setSaving(false);
+      setPublishing(false);
     }
   }
 
@@ -173,20 +230,40 @@ export function AdminPanel() {
 
   return (
     <div className="space-y-10">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="text-sm text-slate-600">
-          Logged in. Make edits and click <span className="font-semibold">Save</span>.
+          You can <span className="font-semibold">Save Draft</span> (only on this device),
+          then <span className="font-semibold">Publish</span> when ready.
         </div>
-        <button
-          type="button"
-          onClick={saveAll}
-          disabled={!canSave}
-          className="inline-flex h-11 items-center justify-center rounded-full bg-sky-600 px-6 text-sm font-semibold text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {saving ? "Saving…" : "Save changes"}
-        </button>
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <button
+            type="button"
+            onClick={() => loadDraft(pin)}
+            className="inline-flex h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-6 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Load Draft
+          </button>
+          <button
+            type="button"
+            onClick={() => saveDraft(pin)}
+            className="inline-flex h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-6 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Save Draft
+          </button>
+          <button
+            type="button"
+            onClick={publishAll}
+            disabled={!canPublish}
+            className="inline-flex h-11 items-center justify-center rounded-full bg-sky-600 px-6 text-sm font-semibold text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {publishing ? "Publishing…" : "Publish"}
+          </button>
+        </div>
       </div>
 
+      {draftStatus ? (
+        <div className="text-sm text-slate-700">{draftStatus}</div>
+      ) : null}
       {error ? <div className="text-sm text-red-600">{error}</div> : null}
       {success ? (
         <div className="text-sm text-emerald-700">{success}</div>
