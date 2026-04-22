@@ -2,26 +2,48 @@
   "items": [
     {
       "title": "Business Name Registration (BN)",
-      "description": "Register a business name with CAC, including guidance on name availability, classification and documentation.",
-      "startingFromNgn": 20000
+      "description": "CAC business name registration with guidance on name availability, classification and documentation.",
+      "startingFromNgn": 40000
     },
     {
-      "title": "Private Limited Company (LTD) Registration",
-      "description": "End-to-end incorporation for an LTD: reserved name, filings, documents and CAC submission support.",
-      "startingFromNgn": 65000
+      "title": "Company Registration (LTD)",
+      "description": "End-to-end company incorporation (e.g., 1M share capital). We guide requirements, prepare filings and submit to CAC.",
+      "startingFromNgn": 70000
     },
     {
-      "title": "NGO / Incorporated Trustees",
-      "description": "Support for Incorporated Trustees registration: constitution, trustees, publication steps, and CAC filings.",
-      "startingFromNgn": 120000
+      "title": "Incorporated Trustees",
+      "description": "Support for Incorporated Trustees registration: constitution, trustees, publication steps and CAC filings.",
+      "startingFromNgn": 150000
+    },
+
+    {
+      "title": "Annual Returns",
+      "description": "Filing of annual returns and routine compliance updates for CAC-registered entities."
     },
     {
-      "title": "Post-Incorporation Updates",
-      "description": "Director/shareholder changes, address updates, share capital changes, and other CAC post-incorporation filings."
+      "title": "Increase in Share Capital",
+      "description": "Share capital increase filings and related documentation support."
     },
     {
-      "title": "TIN & Statutory Registrations",
-      "description": "Help with TIN and common statutory compliance steps needed for business operations."
+      "title": "Change of Name (Director / Proprietor)",
+      "description": "Name change filings and documentation support for directors or proprietors."
+    },
+    {
+      "title": "Reprint (Lost / Misplaced Certificate)",
+      "description": "Assistance with reprinting CAC certificates where the original is lost or misplaced."
+    },
+
+    {
+      "title": "Business Consulting",
+      "description": "Practical guidance for structuring your business, documentation readiness, and incorporation strategy."
+    },
+    {
+      "title": "Trademark Registration",
+      "description": "Trademark search guidance and registration support to protect your brand."
+    },
+    {
+      "title": "SCUML Registration",
+      "description": "Support for SCUML registration for eligible businesses."
     }
   ]
 }

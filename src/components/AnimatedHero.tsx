@@ -8,11 +8,17 @@ export function AnimatedHero({
   subtitle,
   ctaPrimary,
   ctaSecondary,
+  badge,
+  officeAddressLine,
+  officeHoursLine,
 }: {
   title: string;
   subtitle: string;
   ctaPrimary: { label: string; href: string };
   ctaSecondary: { label: string; href: string };
+  badge?: string;
+  officeAddressLine: string;
+  officeHoursLine: string;
 }) {
   return (
     <section className="relative overflow-hidden">
@@ -25,7 +31,8 @@ export function AnimatedHero({
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-semibold text-slate-700">
-            <span className="h-2 w-2 rounded-full bg-sky-500" /> Verified CAC Merchant
+            <span className="h-2 w-2 rounded-full bg-sky-500" />
+            {badge ?? "Verified CAC Merchant"}
           </div>
           <h1 className="mt-5 font-[family-name:var(--font-manrope)] text-4xl font-extrabold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl">
             {title}
@@ -86,9 +93,9 @@ export function AnimatedHero({
                 Kaduna office
               </div>
               <div className="mt-1 text-sm font-semibold text-slate-900">
-                Malha Plaza opp Carwash Kamazou, Yakowa Express Way
+                {officeAddressLine}
               </div>
-              <div className="mt-2 text-xs text-slate-600">Mon–Fri • 9AM–5PM</div>
+              <div className="mt-2 text-xs text-slate-600">{officeHoursLine}</div>
             </div>
             <div className="mt-4 text-xs text-slate-500">
               Tip: Tell us what you want to register, and we’ll send the exact

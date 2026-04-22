@@ -43,7 +43,10 @@ export default async function Home() {
 
       <AnimatedHero
         title="Register your CAC business or company — from anywhere"
-        subtitle="LARIAL LTD is a verified CAC merchant helping Nigerian individuals worldwide register Business Names, LTD companies, and Incorporated Trustees. Clear requirements, guided documentation, and fast WhatsApp support."
+        subtitle={settings.tagline}
+        badge="Verified CAC Merchant"
+        officeAddressLine="Malha Plaza (Adjacent Kamazou U-Turn), Kamazou, Kaduna State"
+        officeHoursLine={settings.hours}
         ctaPrimary={{ label: "Start on WhatsApp", href: wa }}
         ctaSecondary={{ label: "View services", href: "#services" }}
       />
