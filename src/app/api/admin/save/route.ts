@@ -122,28 +122,38 @@ async function putFile({
   content: string;
   message: string;
 }) {
-  const sha = await getFileSha({ repo, branch, token, path });
+  async function attemptWrite(sha: string | null) {
+    const body: Record<string, unknown> = {
+      message,
+      content: b64(content),
+      branch,
+    };
+    if (sha) body.sha = sha;
 
-  const body: Record<string, unknown> = {
-    message,
-    content: b64(content),
-    branch,
-  };
-  if (sha) body.sha = sha;
+    return ghFetch(
+      `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/vnd.github+json",
+          "Content-Type": "application/json",
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+        body: JSON.stringify(body),
+      }
+    );
+  }
 
-  const { res, json, text } = await ghFetch(
-    `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`,
-    {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        Accept: "application/vnd.github+json",
-        "Content-Type": "application/json",
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-      body: JSON.stringify(body),
-    }
-  );
+  // First try
+  let sha = await getFileSha({ repo, branch, token, path });
+  let { res, json, text } = await attemptWrite(sha);
+
+  // If the file changed between read and write, retry once with fresh sha
+  if (res.status === 409) {
+    sha = await getFileSha({ repo, branch, token, path });
+    ({ res, json, text } = await attemptWrite(sha));
+  }
 
   if (!res.ok) {
     throw new Error(
