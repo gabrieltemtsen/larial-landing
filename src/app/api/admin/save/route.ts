@@ -180,32 +180,45 @@ export async function POST(req: Request) {
 
   const msg = `admin: update site content (${new Date().toISOString()})`;
 
-  await Promise.all([
-    putFile({
-      repo,
-      branch,
-      token,
-      path: "content/settings.json",
-      content: settingsJson,
-      message: msg,
-    }),
-    putFile({
-      repo,
-      branch,
-      token,
-      path: "content/services.json",
-      content: servicesJson,
-      message: msg,
-    }),
-    putFile({
-      repo,
-      branch,
-      token,
-      path: "content/jobs.json",
-      content: jobsJson,
-      message: msg,
-    }),
-  ]);
+  try {
+    await Promise.all([
+      putFile({
+        repo,
+        branch,
+        token,
+        path: "content/settings.json",
+        content: settingsJson,
+        message: msg,
+      }),
+      putFile({
+        repo,
+        branch,
+        token,
+        path: "content/services.json",
+        content: servicesJson,
+        message: msg,
+      }),
+      putFile({
+        repo,
+        branch,
+        token,
+        path: "content/jobs.json",
+        content: jobsJson,
+        message: msg,
+      }),
+    ]);
 
-  return Response.json({ ok: true });
+    return Response.json({ ok: true });
+  } catch (e: unknown) {
+    const message = e instanceof Error ? e.message : "Unknown error";
+    return Response.json(
+      {
+        ok: false,
+        error: message,
+        hint:
+          "Check GITHUB_TOKEN permissions (Contents: read/write), repo name, and branch.",
+      },
+      { status: 500 }
+    );
+  }
 }
