@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="206" y1="84" x2="1010" y2="592" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="-10" r="340" fill="#E0F2FE"/>
+  <circle cx="160" cy="640" r="320" fill="#E0F2FE"/>
+
+  <g transform="translate(110 150)">
+    <rect x="0" y="0" width="140" height="140" rx="40" fill="#E5E7EB"/>
+    <rect x="12" y="12" width="116" height="116" rx="34" fill="#0EA5E9"/>
+    <path d="M48 98V42h22c16 0 26 8 26 22 0 14-10 34-34 34H48Zm16-13h0.4c13 0 18-9 18-17 0-7-4-11-13-11H64v28Z" fill="#fff" fill-opacity="0.95"/>
+  </g>
+
+  <text x="300" y="225" font-family="ui-sans-serif, system-ui, -apple-system" font-size="72" font-weight="800" fill="#0B1220">LARIAL LTD</text>
+  <text x="300" y="295" font-family="ui-sans-serif, system-ui, -apple-system" font-size="32" font-weight="600" fill="#0EA5E9">Verified CAC Merchant</text>
+  <text x="300" y="360" font-family="ui-sans-serif, system-ui, -apple-system" font-size="28" fill="#334155">Company registration for Nigerians worldwide — Kaduna office.</text>
+  <text x="300" y="420" font-family="ui-sans-serif, system-ui, -apple-system" font-size="22" fill="#64748B">Fast guidance • Clear requirements • Reliable follow-through</text>
+</svg>

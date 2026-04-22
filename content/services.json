@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "title": "Business Name Registration (BN)",
+      "description": "Register a business name with CAC, including guidance on name availability, classification and documentation.",
+      "startingFromNgn": 20000
+    },
+    {
+      "title": "Private Limited Company (LTD) Registration",
+      "description": "End-to-end incorporation for an LTD: reserved name, filings, documents and CAC submission support.",
+      "startingFromNgn": 65000
+    },
+    {
+      "title": "NGO / Incorporated Trustees",
+      "description": "Support for Incorporated Trustees registration: constitution, trustees, publication steps, and CAC filings.",
+      "startingFromNgn": 120000
+    },
+    {
+      "title": "Post-Incorporation Updates",
+      "description": "Director/shareholder changes, address updates, share capital changes, and other CAC post-incorporation filings."
+    },
+    {
+      "title": "TIN & Statutory Registrations",
+      "description": "Help with TIN and common statutory compliance steps needed for business operations."
+    }
+  ]
+}

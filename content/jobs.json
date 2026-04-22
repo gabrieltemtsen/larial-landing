@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": "customer-success",
+      "title": "Customer Success / Support",
+      "location": "Kaduna (Onsite)",
+      "type": "Full-time",
+      "summary": "Help clients navigate CAC registration requirements, document collection, and progress updates.",
+      "responsibilities": [
+        "Respond to WhatsApp and email inquiries professionally",
+        "Track client onboarding documents and status",
+        "Coordinate with the operations team to meet timelines"
+      ],
+      "requirements": [
+        "Strong written communication",
+        "Comfortable with WhatsApp-first support",
+        "Basic knowledge of CAC processes is a plus"
+      ]
+    },
+    {
+      "id": "business-development",
+      "title": "Business Development Associate",
+      "location": "Kaduna (Hybrid)",
+      "type": "Contract / Part-time",
+      "summary": "Drive partnerships and referrals with professionals and communities serving Nigerians worldwide.",
+      "responsibilities": [
+        "Identify and build referral partnerships",
+        "Support marketing outreach and community engagement"
+      ],
+      "requirements": [
+        "Sales/partnership experience",
+        "Confident communication and follow-through"
+      ]
+    }
+  ]
+}

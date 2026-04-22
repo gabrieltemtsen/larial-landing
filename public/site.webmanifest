@@ -1,0 +1,11 @@
+{
+  "name": "LARIAL LTD",
+  "short_name": "LARIAL",
+  "description": "Verified CAC merchant helping Nigerians worldwide register CAC businesses and companies.",
+  "icons": [
+    {"src": "/brand/larial-icon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ],
+  "theme_color": "#0EA5E9",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}
