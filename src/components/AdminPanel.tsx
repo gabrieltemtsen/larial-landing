@@ -152,6 +152,7 @@ export function AdminPanel() {
             className="h-12 w-full rounded-2xl border border-slate-200 px-4 text-sm outline-none ring-sky-500/30 focus:ring"
           />
           <button
+            type="button"
             disabled={loading || pin.length < 4}
             onClick={() => authAndLoad(pin)}
             className="inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-slate-900 px-5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
@@ -177,6 +178,7 @@ export function AdminPanel() {
           Logged in. Make edits and click <span className="font-semibold">Save</span>.
         </div>
         <button
+          type="button"
           onClick={saveAll}
           disabled={!canSave}
           className="inline-flex h-11 items-center justify-center rounded-full bg-sky-600 px-6 text-sm font-semibold text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60"
@@ -251,12 +253,14 @@ export function AdminPanel() {
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-base font-bold text-slate-900">Services</h2>
           <button
-            onClick={() =>
+            type="button"
+            onClick={(e) => {
               setServices([
                 ...services,
                 { title: "New service", description: "", startingFromNgn: undefined },
-              ])
-            }
+              ]);
+              (e.currentTarget as HTMLButtonElement).blur();
+            }}
             className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
           >
             + Add
@@ -271,6 +275,7 @@ export function AdminPanel() {
                   Service {idx + 1}
                 </div>
                 <button
+                  type="button"
                   onClick={() => setServices(services.filter((_, i) => i !== idx))}
                   className="text-sm font-semibold text-red-600 hover:text-red-700"
                 >
@@ -334,7 +339,8 @@ export function AdminPanel() {
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-base font-bold text-slate-900">Open roles</h2>
           <button
-            onClick={() =>
+            type="button"
+            onClick={(e) => {
               setJobs([
                 ...jobs,
                 {
@@ -346,8 +352,9 @@ export function AdminPanel() {
                   responsibilities: [],
                   requirements: [],
                 },
-              ])
-            }
+              ]);
+              (e.currentTarget as HTMLButtonElement).blur();
+            }}
             className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
           >
             + Add
@@ -362,6 +369,7 @@ export function AdminPanel() {
                   Role {idx + 1}
                 </div>
                 <button
+                  type="button"
                   onClick={() => setJobs(jobs.filter((_, i) => i !== idx))}
                   className="text-sm font-semibold text-red-600 hover:text-red-700"
                 >
