@@ -15,7 +15,6 @@
       "description": "Support for Incorporated Trustees registration: constitution, trustees, publication steps and CAC filings.",
       "startingFromNgn": 150000
     },
-
     {
       "title": "Annual Returns",
       "description": "Filing of annual returns and routine compliance updates for CAC-registered entities."
@@ -32,7 +31,6 @@
       "title": "Reprint (Lost / Misplaced Certificate)",
       "description": "Assistance with reprinting CAC certificates where the original is lost or misplaced."
     },
-
     {
       "title": "Business Consulting",
       "description": "Practical guidance for structuring your business, documentation readiness, and incorporation strategy."
