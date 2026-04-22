@@ -1,30 +1,19 @@
-<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="560" height="160" viewBox="0 0 560 160" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="g" x1="40" y1="18" x2="92" y2="102" gradientUnits="userSpaceOnUse">
+    <linearGradient id="g" x1="22" y1="18" x2="118" y2="142" gradientUnits="userSpaceOnUse">
       <stop stop-color="#38BDF8"/>
       <stop offset="1" stop-color="#0EA5E9"/>
     </linearGradient>
   </defs>
+
   <!-- Mark -->
-  <g>
-    <path d="M60 18c19.33 0 35 15.67 35 35v14c0 19.33-15.67 35-35 35S25 86.33 25 67V53c0-19.33 15.67-35 35-35Z" fill="#E5E7EB"/>
-    <path d="M60 26c15.46 0 28 12.54 28 28v12c0 15.46-12.54 28-28 28S32 81.46 32 66V54c0-15.46 12.54-28 28-28Z" fill="url(#g)"/>
-    <path d="M52 74V46h10.5c8.2 0 13.5 4.4 13.5 12.1 0 7.7-5.3 15.9-17.3 15.9H52Zm8.3-6.9h0.2c6.9 0 9.9-4.6 9.9-8.7 0-3.6-2.1-5.7-7.2-5.7h-3v14.4Z" fill="#FFFFFF" fill-opacity="0.95"/>
-  </g>
+  <rect x="18" y="18" width="124" height="124" rx="36" fill="#E5E7EB"/>
+  <rect x="28" y="28" width="104" height="104" rx="30" fill="url(#g)"/>
+  <path d="M60 54h14v54h40v12H60V54Z" fill="#FFFFFF" fill-opacity="0.95"/>
 
   <!-- Wordmark -->
-  <g fill="#0B1220">
-    <path d="M134.2 78V38.6h10.3V69h18.2V78h-28.5Z"/>
-    <path d="M169.3 78V38.6h27.2v8.4h-16.9v7h15.8v8.1h-15.8v7.5h17.4V78h-27.7Z"/>
-    <path d="M221.2 78l-7.1-12.7h-4.7V78H199V38.6h16.1c10.2 0 16.5 5 16.5 13.5 0 5.6-2.8 9.7-7.5 11.8L233 78h-11.8Zm-11.8-20.6h5.1c4 0 6.7-1.5 6.7-4.9s-2.7-4.9-6.7-4.9h-5.1v9.8Z"/>
-    <path d="M238.7 78V38.6H249V78h-10.3Z"/>
-    <path d="M257.5 78V38.6h10.3V69H286V78h-28.5Z"/>
-  </g>
-
-  <!-- LTD -->
-  <g fill="#6B7280">
-    <path d="M305.7 78V52h4.5v22h11V78h-15.5Z"/>
-    <path d="M325.8 78V52h7.6c7.1 0 12 4 12 12.9 0 8.9-4.9 13.1-12 13.1h-7.6Zm4.5-3.9h2.7c4.8 0 7.6-3 7.6-9.2 0-6.2-2.8-9-7.6-9h-2.7v18.2Z"/>
-    <path d="M353.3 78V55.9h-7V52h18.5v3.9h-7V78h-4.5Z"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" fill="#0B1220">
+    <text x="170" y="90" font-size="56" font-weight="800" letter-spacing="-0.02em">LARIAL</text>
+    <text x="365" y="90" font-size="28" font-weight="700" fill="#64748B">LTD</text>
   </g>
 </svg>
