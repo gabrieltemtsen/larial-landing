@@ -1,35 +1,26 @@
 {
   "items": [
     {
-      "id": "customer-success",
-      "title": "Customer Success / Support",
-      "location": "Kaduna (Onsite)",
-      "type": "Full-time",
-      "summary": "Help clients navigate CAC registration requirements, document collection, and progress updates.",
-      "responsibilities": [
-        "Respond to WhatsApp and email inquiries professionally",
-        "Track client onboarding documents and status",
-        "Coordinate with the operations team to meet timelines"
-      ],
-      "requirements": [
-        "Strong written communication",
-        "Comfortable with WhatsApp-first support",
-        "Basic knowledge of CAC processes is a plus"
-      ]
-    },
-    {
-      "id": "business-development",
-      "title": "Business Development Associate",
+      "id": "social-media-manager",
+      "title": "Social Media Manager",
       "location": "Kaduna (Hybrid)",
-      "type": "Contract / Part-time",
-      "summary": "Drive partnerships and referrals with professionals and communities serving Nigerians worldwide.",
+      "type": "Full-time",
+      "summary": "Own LARIAL LTD's social presence end-to-end — build a content engine that turns CAC compliance into clear, useful, on-brand storytelling for Nigerians at home and abroad.",
       "responsibilities": [
-        "Identify and build referral partnerships",
-        "Support marketing outreach and community engagement"
+        "Plan and publish a weekly content calendar across Instagram, X, TikTok, LinkedIn, Facebook, and WhatsApp Status",
+        "Write short-form copy, captions, and hooks that explain CAC services in plain language",
+        "Produce or commission lightweight graphics, reels, and short-form video (Canva / CapCut level)",
+        "Run community management — DMs, comments, replies — and route serious leads to WhatsApp",
+        "Track engagement and follower growth; report what's working and iterate monthly",
+        "Coordinate with Ops/Compliance to turn real client wins into shareable case studies"
       ],
       "requirements": [
-        "Sales/partnership experience",
-        "Confident communication and follow-through"
+        "1+ year managing brand social accounts (agency or in-house)",
+        "Strong written communication in English; Pidgin a plus",
+        "Comfortable with Canva, CapCut, and at least one scheduling tool (Meta Business Suite, Buffer, or similar)",
+        "Eye for clean, modern, on-brand visuals",
+        "Self-starter who can ship without micromanagement",
+        "Bonus: familiarity with CAC / SME / fintech audiences in Nigeria"
       ]
     }
   ]
