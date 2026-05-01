@@ -42,6 +42,30 @@
     {
       "title": "SCUML Registration",
       "description": "Support for SCUML registration for eligible businesses."
+    },
+    {
+      "title": "Software Development",
+      "description": "Custom software builds for SMEs and startups — from internal tools and dashboards to full SaaS products. Discovery, build, deploy."
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "iOS and Android apps built with React Native or Flutter. From MVP to App Store / Play Store launch — including post-launch support."
+    },
+    {
+      "title": "Web Development",
+      "description": "Modern, fast, mobile-first websites and web apps — landing pages, business sites, portals, and storefronts."
+    },
+    {
+      "title": "UI / UX Design",
+      "description": "Product design that earns trust and converts — research, wireframes, high-fidelity UI, and design systems for web and mobile."
+    },
+    {
+      "title": "Cloud & DevOps",
+      "description": "Infrastructure, deployments, monitoring and CI/CD on AWS, GCP, or Azure — so your product runs reliably as it grows."
+    },
+    {
+      "title": "IT Consulting",
+      "description": "Advisory on technology choices, vendor selection, security, and digital strategy for businesses going online."
     }
   ]
 }

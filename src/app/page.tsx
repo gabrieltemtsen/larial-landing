@@ -26,6 +26,12 @@ const SERVICE_ICONS: Record<string, string> = {
   "Business Consulting": "💡",
   "Trademark Registration": "™️",
   "SCUML Registration": "🛡️",
+  "Software Development": "💻",
+  "Mobile App Development": "📱",
+  "Web Development": "🌐",
+  "UI / UX Design": "🎨",
+  "Cloud & DevOps": "☁️",
+  "IT Consulting": "🧠",
 };
 
 export default async function Home() {
@@ -72,13 +78,14 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-              Trusted for CAC compliance
+              CAC compliance + technology partner
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-700">
               <span className="rounded-full bg-slate-100 px-3 py-1">CAC Accredited</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">SCUML Aware</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">Trademark Filings</span>
-              <span className="rounded-full bg-slate-100 px-3 py-1">Annual Returns</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">Software Builds</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">Mobile Apps</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">Web Development</span>
+              <span className="rounded-full bg-slate-100 px-3 py-1">UI / UX Design</span>
             </div>
           </div>
         </div>
@@ -355,15 +362,17 @@ export default async function Home() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {[
                 ["BN", "Business Names"],
                 ["LTD", "Limited Companies"],
                 ["IT", "Incorporated Trustees"],
-                ["AR", "Annual Returns"],
+                ["💻", "Software"],
+                ["📱", "Mobile Apps"],
+                ["🌐", "Web & UI/UX"],
               ].map(([k, l]) => (
                 <div
-                  key={k}
+                  key={l}
                   className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur"
                 >
                   <div className="text-2xl font-extrabold">{k}</div>

@@ -31,6 +31,12 @@ const ICONS: Record<string, string> = {
   "Business Consulting": "💡",
   "Trademark Registration": "™️",
   "SCUML Registration": "🛡️",
+  "Software Development": "💻",
+  "Mobile App Development": "📱",
+  "Web Development": "🌐",
+  "UI / UX Design": "🎨",
+  "Cloud & DevOps": "☁️",
+  "IT Consulting": "🧠",
 };
 
 const CATEGORIES: { id: string; label: string; titles: string[] }[] = [
@@ -57,6 +63,18 @@ const CATEGORIES: { id: string; label: string; titles: string[] }[] = [
     id: "advisory",
     label: "Advisory & Brand",
     titles: ["Business Consulting", "Trademark Registration", "SCUML Registration"],
+  },
+  {
+    id: "technology",
+    label: "Technology",
+    titles: [
+      "Software Development",
+      "Mobile App Development",
+      "Web Development",
+      "UI / UX Design",
+      "Cloud & DevOps",
+      "IT Consulting",
+    ],
   },
 ];
 
@@ -144,7 +162,9 @@ export default async function ServicesPage() {
                       ? "Start your business properly."
                       : cat.label === "Post-incorporation"
                         ? "Stay compliant year after year."
-                        : "Grow, advise, protect."}
+                        : cat.label === "Technology"
+                          ? "Build the digital side of your business."
+                          : "Grow, advise, protect."}
                   </h2>
                 </div>
               </div>

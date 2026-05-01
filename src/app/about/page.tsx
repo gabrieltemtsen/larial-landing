@@ -178,32 +178,107 @@ export default async function AboutPage() {
               What we do
             </div>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              From first registration to year ten.
+              CAC compliance{" "}
+              <span className="text-gradient-brand">+ the tech</span> to grow on.
             </h2>
             <p className="mt-3 text-slate-600">
-              We support founders across the entire CAC lifecycle —
-              registration, post-incorporation compliance, and brand protection.
+              We support founders across the entire CAC lifecycle and help them
+              build the digital side of their business — from custom software
+              and mobile apps to modern websites.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { t: "Register", d: "BN, LTD, Incorporated Trustees", icon: "📇" },
-              { t: "Maintain", d: "Annual returns & filings", icon: "🗂️" },
-              { t: "Update", d: "Capital, names, directors", icon: "✍️" },
-              { t: "Protect", d: "Trademarks & SCUML", icon: "🛡️" },
-            ].map((card) => (
-              <div
-                key={card.t}
-                className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-sky-50/30 p-6"
-              >
-                <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-100 to-indigo-100 text-xl">
-                  {card.icon}
+          <div className="mt-10">
+            <div className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              CAC compliance
+            </div>
+            <div className="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { t: "Register", d: "BN, LTD, Incorporated Trustees", icon: "📇" },
+                { t: "Maintain", d: "Annual returns & filings", icon: "🗂️" },
+                { t: "Update", d: "Capital, names, directors", icon: "✍️" },
+                { t: "Protect", d: "Trademarks & SCUML", icon: "🛡️" },
+              ].map((card) => (
+                <div
+                  key={card.t}
+                  className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-sky-50/30 p-6"
+                >
+                  <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-100 to-indigo-100 text-xl">
+                    {card.icon}
+                  </div>
+                  <div className="mt-4 text-base font-bold text-slate-900">
+                    {card.t}
+                  </div>
+                  <div className="mt-1 text-sm text-slate-600">{card.d}</div>
                 </div>
-                <div className="mt-4 text-base font-bold text-slate-900">{card.t}</div>
-                <div className="mt-1 text-sm text-slate-600">{card.d}</div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <div className="text-xs font-semibold uppercase tracking-wider text-indigo-700">
+              Technology
+            </div>
+            <div className="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  t: "Software Development",
+                  d: "Custom software, internal tools, and SaaS — from idea to launch.",
+                  icon: "💻",
+                  accent: "from-sky-500 to-indigo-500",
+                },
+                {
+                  t: "Mobile App Development",
+                  d: "iOS & Android apps using React Native or Flutter — to App Store ready.",
+                  icon: "📱",
+                  accent: "from-cyan-500 to-sky-500",
+                },
+                {
+                  t: "Web Development",
+                  d: "Fast, mobile-first websites, portals, and storefronts.",
+                  icon: "🌐",
+                  accent: "from-indigo-500 to-violet-500",
+                },
+                {
+                  t: "UI / UX Design",
+                  d: "Research, wireframes, high-fidelity UI, design systems.",
+                  icon: "🎨",
+                  accent: "from-fuchsia-500 to-pink-500",
+                },
+                {
+                  t: "Cloud & DevOps",
+                  d: "Reliable infra, CI/CD, monitoring on AWS / GCP / Azure.",
+                  icon: "☁️",
+                  accent: "from-emerald-500 to-teal-500",
+                },
+                {
+                  t: "IT Consulting",
+                  d: "Tech choices, vendor selection, security, digital strategy.",
+                  icon: "🧠",
+                  accent: "from-amber-500 to-orange-500",
+                },
+              ].map((card) => (
+                <div
+                  key={card.t}
+                  className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-25px_rgba(99,102,241,0.4)]"
+                >
+                  <div
+                    className={`absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gradient-to-br ${card.accent} opacity-15 blur-2xl transition group-hover:opacity-25`}
+                  />
+                  <div
+                    className={`grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${card.accent} text-2xl text-white shadow-md`}
+                  >
+                    <span>{card.icon}</span>
+                  </div>
+                  <div className="mt-4 text-base font-bold text-slate-900">
+                    {card.t}
+                  </div>
+                  <div className="mt-1 text-sm leading-6 text-slate-600">
+                    {card.d}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
