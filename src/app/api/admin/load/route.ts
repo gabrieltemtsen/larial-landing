@@ -1,5 +1,11 @@
 import { z } from "zod";
-import { getJobs, getServices, getSettings } from "@/lib/content";
+import {
+  getJobs,
+  getServices,
+  getSettings,
+  getTestimonials,
+  getWorks,
+} from "@/lib/content";
 
 export const runtime = "nodejs";
 
@@ -23,13 +29,15 @@ export async function GET(req: Request) {
   const gate = requirePin(req);
   if (!gate.ok) return gate.res;
 
-  const [settings, services, jobs] = await Promise.all([
+  const [settings, services, jobs, testimonials, works] = await Promise.all([
     getSettings(),
     getServices(),
     getJobs(),
+    getTestimonials(),
+    getWorks(),
   ]);
 
-  return Response.json({ settings, services, jobs });
+  return Response.json({ settings, services, jobs, testimonials, works });
 }
 
 const PingSchema = z.object({ ping: z.literal(true) });

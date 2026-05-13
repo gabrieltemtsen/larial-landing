@@ -50,10 +50,45 @@ const JobSchema = z.object({
   requirements: z.array(z.string().min(2).max(200)).max(30),
 });
 
+const TestimonialSchema = z.object({
+  id: z.string().min(1).max(80),
+  name: z.string().min(2).max(120),
+  role: z.string().min(2).max(160),
+  location: z.string().min(2).max(120),
+  quote: z.string().min(10).max(600),
+  rating: z.number().int().min(1).max(5),
+  service: z.string().min(2).max(120),
+  year: z.number().int().min(2000).max(2100),
+  featured: z.boolean(),
+});
+
+const WorkSchema = z.object({
+  id: z.string().min(1).max(80),
+  slug: z.string().min(1).max(120),
+  title: z.string().min(2).max(160),
+  client: z.string().min(2).max(160),
+  anonymized: z.boolean(),
+  category: z.enum(["CAC", "Software", "Mobile", "Web", "Design"]),
+  summary: z.string().min(10).max(800),
+  outcome: z.string().min(10).max(300),
+  year: z.number().int().min(2000).max(2100),
+  cover: z.string().max(300).nullable(),
+  tags: z.array(z.string().min(1).max(40)).max(12),
+  url: z.string().url().max(300).nullable(),
+  featured: z.boolean(),
+  story: z.object({
+    challenge: z.string().min(10).max(1200),
+    approach: z.string().min(10).max(1200),
+    result: z.string().min(10).max(1200),
+  }),
+});
+
 const PayloadSchema = z.object({
   settings: SettingsSchema,
   services: z.array(ServiceSchema).max(100),
   jobs: z.array(JobSchema).max(100),
+  testimonials: z.array(TestimonialSchema).max(100),
+  works: z.array(WorkSchema).max(100),
 });
 
 function b64(s: string) {
@@ -187,6 +222,9 @@ export async function POST(req: Request) {
   const servicesJson =
     JSON.stringify({ items: parsed.data.services }, null, 2) + "\n";
   const jobsJson = JSON.stringify({ items: parsed.data.jobs }, null, 2) + "\n";
+  const testimonialsJson =
+    JSON.stringify({ items: parsed.data.testimonials }, null, 2) + "\n";
+  const worksJson = JSON.stringify({ items: parsed.data.works }, null, 2) + "\n";
 
   const msg = `admin: update site content (${new Date().toISOString()})`;
 
@@ -214,6 +252,22 @@ export async function POST(req: Request) {
         token,
         path: "content/jobs.json",
         content: jobsJson,
+        message: msg,
+      }),
+      putFile({
+        repo,
+        branch,
+        token,
+        path: "content/testimonials.json",
+        content: testimonialsJson,
+        message: msg,
+      }),
+      putFile({
+        repo,
+        branch,
+        token,
+        path: "content/works.json",
+        content: worksJson,
         message: msg,
       }),
     ]);
