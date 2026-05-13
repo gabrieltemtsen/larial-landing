@@ -11,7 +11,12 @@
       "outcome": "Registered LTD in 4 working days; bank account opened the following week.",
       "year": 2025,
       "cover": null,
-      "tags": ["LTD", "TIN", "Lagos", "Fintech"],
+      "tags": [
+        "LTD",
+        "TIN",
+        "Lagos",
+        "Fintech"
+      ],
       "url": null,
       "featured": true,
       "story": {
@@ -31,7 +36,11 @@
       "outcome": "Registered Incorporated Trustees; foundation now eligible for institutional grants.",
       "year": 2024,
       "cover": null,
-      "tags": ["Incorporated Trustees", "Abuja", "Non-profit"],
+      "tags": [
+        "Incorporated Trustees",
+        "Abuja",
+        "Non-profit"
+      ],
       "url": null,
       "featured": true,
       "story": {
@@ -51,7 +60,11 @@
       "outcome": "Replaced 3 SaaS subscriptions; team saved ~10 hours/week on admin.",
       "year": 2025,
       "cover": null,
-      "tags": ["Next.js", "Postgres", "Dashboard"],
+      "tags": [
+        "Next.js",
+        "Postgres",
+        "Dashboard"
+      ],
       "url": null,
       "featured": true,
       "story": {
@@ -71,7 +84,12 @@
       "outcome": "Live on both App Store and Play Store; 2,000+ downloads in first quarter.",
       "year": 2025,
       "cover": null,
-      "tags": ["React Native", "iOS", "Android", "Diaspora"],
+      "tags": [
+        "React Native",
+        "iOS",
+        "Android",
+        "Diaspora"
+      ],
       "url": null,
       "featured": true,
       "story": {
@@ -91,7 +109,11 @@
       "outcome": "Online orders went from zero to 30+ in the first month.",
       "year": 2024,
       "cover": null,
-      "tags": ["Next.js", "WhatsApp Commerce", "Kano"],
+      "tags": [
+        "Next.js",
+        "WhatsApp Commerce",
+        "Kano"
+      ],
       "url": null,
       "featured": false,
       "story": {
@@ -111,7 +133,11 @@
       "outcome": "Unified visual identity across customer site, driver app and ops dashboard.",
       "year": 2024,
       "cover": null,
-      "tags": ["UI/UX", "Design System", "Logistics"],
+      "tags": [
+        "UI/UX",
+        "Design System",
+        "Logistics"
+      ],
       "url": null,
       "featured": false,
       "story": {
