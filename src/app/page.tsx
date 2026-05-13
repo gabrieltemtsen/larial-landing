@@ -3,8 +3,15 @@ import { AnimatedHero } from "@/components/AnimatedHero";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { WorkCard } from "@/components/WorkCard";
 import { GridBackdrop } from "@/components/Decor";
-import { getServices, getSettings } from "@/lib/content";
+import {
+  getServices,
+  getSettings,
+  getTestimonials,
+  getWorks,
+} from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
 
 function formatNgn(n: number) {
@@ -35,8 +42,12 @@ const SERVICE_ICONS: Record<string, string> = {
 };
 
 export default async function Home() {
-  const settings = await getSettings();
-  const services = await getServices();
+  const [settings, services, testimonials, works] = await Promise.all([
+    getSettings(),
+    getServices(),
+    getTestimonials(),
+    getWorks(),
+  ]);
   const wa = whatsappLink(
     "Hi LARIAL LTD — I want to register a business/company with CAC. Please guide me."
   );
@@ -59,6 +70,8 @@ export default async function Home() {
   };
 
   const homeServices = services.slice(0, 6);
+  const featuredTestimonials = testimonials.filter((item) => item.featured).slice(0, 3);
+  const featuredWorks = works.filter((item) => item.featured).slice(0, 3);
 
   return (
     <div className="min-h-screen">
@@ -332,6 +345,40 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* Featured work */}
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">
+                Our Work
+              </div>
+              <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                Proof across CAC, software, mobile, and web.
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Recent work highlights, from registration deadlines to shipped
+                digital products.
+              </p>
+            </div>
+            <Link
+              href="/works"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
+            >
+              View all work
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {featuredWorks.map((work, idx) => (
+              <WorkCard key={work.id} work={work} priority={idx === 0} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <TestimonialsSection testimonials={featuredTestimonials} />
 
       {/* CTA banner */}
       <section className="relative isolate overflow-hidden bg-slate-950 text-white">

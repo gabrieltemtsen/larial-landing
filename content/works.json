@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "id": "fairmark-ltd",
+      "slug": "fairmark-ltd",
+      "title": "Fairmark Ltd — LTD registration in 4 days",
+      "client": "Fairmark Ltd",
+      "anonymized": false,
+      "category": "CAC",
+      "summary": "Helped a Lagos-based fintech founder register a private LTD with 1M share capital plus TIN setup, ahead of a partner-bank deadline.",
+      "outcome": "Registered LTD in 4 working days; bank account opened the following week.",
+      "year": 2025,
+      "cover": null,
+      "tags": ["LTD", "TIN", "Lagos", "Fintech"],
+      "url": null,
+      "featured": true,
+      "story": {
+        "challenge": "The founder needed a private LTD registered before a partner bank's onboarding deadline — eight working days away.",
+        "approach": "Pre-flight check on name availability, share structure recommendations for fintech, fast-track CAC submission, and a TIN application bundled in.",
+        "result": "Certificate delivered in 4 working days; bank account opened the following week; founder shipped their MVP the same month."
+      }
+    },
+    {
+      "id": "mustard-seed",
+      "slug": "mustard-seed-foundation",
+      "title": "Mustard Seed Foundation — Incorporated Trustees",
+      "client": "Mustard Seed Foundation",
+      "anonymized": false,
+      "category": "CAC",
+      "summary": "End-to-end Incorporated Trustees registration for an Abuja-based foundation — constitution drafting, trustee verification, newspaper publication and CAC filings.",
+      "outcome": "Registered Incorporated Trustees; foundation now eligible for institutional grants.",
+      "year": 2024,
+      "cover": null,
+      "tags": ["Incorporated Trustees", "Abuja", "Non-profit"],
+      "url": null,
+      "featured": true,
+      "story": {
+        "challenge": "A foundation operating informally for two years needed proper IT status to receive grants from international donors.",
+        "approach": "Drafted constitution against CAC guidelines, ran trustee verifications, coordinated newspaper publication, and pre-empted common rejection causes.",
+        "result": "Approved on first submission; now actively receiving donor grants."
+      }
+    },
+    {
+      "id": "bytestack-tool",
+      "slug": "bytestack-internal-tool",
+      "title": "Bytestack Studio — internal ops tool",
+      "client": "Bytestack Studio",
+      "anonymized": false,
+      "category": "Software",
+      "summary": "Custom internal operations dashboard for a hybrid London/Lagos studio — project tracking, client portal, invoicing.",
+      "outcome": "Replaced 3 SaaS subscriptions; team saved ~10 hours/week on admin.",
+      "year": 2025,
+      "cover": null,
+      "tags": ["Next.js", "Postgres", "Dashboard"],
+      "url": null,
+      "featured": true,
+      "story": {
+        "challenge": "Studio team was juggling Notion, Trello, and a separate invoicing tool — none of them sharing data.",
+        "approach": "Discovery workshop, single Next.js app with Postgres, role-based access, invoicing module wired to client portal.",
+        "result": "One source of truth; ~10 hours/week reclaimed; cancelled 3 SaaS subscriptions."
+      }
+    },
+    {
+      "id": "pathway-mobile",
+      "slug": "pathway-mobile-app",
+      "title": "Pathway HQ — diaspora services mobile app",
+      "client": "Pathway HQ",
+      "anonymized": false,
+      "category": "Mobile",
+      "summary": "Cross-platform mobile app helping Nigerians in the diaspora coordinate services back home — registrations, remittance, document handling.",
+      "outcome": "Live on both App Store and Play Store; 2,000+ downloads in first quarter.",
+      "year": 2025,
+      "cover": null,
+      "tags": ["React Native", "iOS", "Android", "Diaspora"],
+      "url": null,
+      "featured": true,
+      "story": {
+        "challenge": "Founders needed a single mobile experience to serve diaspora customers across multiple service types.",
+        "approach": "React Native build, modular service catalogue, push-notification status updates, integrated chat handoff to a WhatsApp-style support flow.",
+        "result": "Shipped to both stores in 14 weeks; 2,000+ downloads and a 4.6 average rating in Q1."
+      }
+    },
+    {
+      "id": "halima-studio-web",
+      "slug": "halima-studio-website",
+      "title": "Halima Studio — boutique storefront",
+      "client": "Halima Studio",
+      "anonymized": false,
+      "category": "Web",
+      "summary": "Modern, mobile-first storefront with WhatsApp checkout for a Kano-based boutique.",
+      "outcome": "Online orders went from zero to 30+ in the first month.",
+      "year": 2024,
+      "cover": null,
+      "tags": ["Next.js", "WhatsApp Commerce", "Kano"],
+      "url": null,
+      "featured": false,
+      "story": {
+        "challenge": "All sales happened over WhatsApp DMs; no catalogue, no scalable way to share.",
+        "approach": "Clean Next.js site with product gallery, WhatsApp-deep-link checkout, simple admin for the owner to update stock.",
+        "result": "30+ online orders in the first month; significantly less manual back-and-forth."
+      }
+    },
+    {
+      "id": "sahel-brand",
+      "slug": "sahel-logistics-brand",
+      "title": "Sahel Logistics — brand & UI refresh",
+      "client": "Sahel Logistics",
+      "anonymized": false,
+      "category": "Design",
+      "summary": "Brand refresh and UI design system for a regional logistics company — covering web, mobile and field operator dashboards.",
+      "outcome": "Unified visual identity across customer site, driver app and ops dashboard.",
+      "year": 2024,
+      "cover": null,
+      "tags": ["UI/UX", "Design System", "Logistics"],
+      "url": null,
+      "featured": false,
+      "story": {
+        "challenge": "Three products, three different design languages — confusing for both customers and ops staff.",
+        "approach": "Audit of existing surfaces, redesigned brand foundations (type, colour, voice), shipped a shared Figma library and tokens.",
+        "result": "One coherent identity across customer-facing and internal tools; faster handoff for future features."
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { whatsappLink } from "@/lib/site";
 const NAV = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Our Services" },
+  { href: "/works", label: "Our Work" },
   { href: "/management", label: "Management" },
   { href: "/post-incorporation", label: "Post-Incorporation" },
   { href: "/contact", label: "Contact Us" },

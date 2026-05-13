@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": "amaka-2025",
+      "name": "Amaka O.",
+      "role": "Founder, Crafted Mango Ltd",
+      "location": "Lagos, NG",
+      "quote": "LARIAL handled my LTD registration end-to-end while I was traveling abroad. Felt like having an in-house compliance team — clear checklist, zero back-and-forth.",
+      "rating": 5,
+      "service": "Company Registration (LTD)",
+      "year": 2025,
+      "featured": true
+    },
+    {
+      "id": "ibrahim-2025",
+      "name": "Ibrahim S.",
+      "role": "Director, Sahel Logistics",
+      "location": "Kaduna, NG",
+      "quote": "We needed annual returns sorted before a bank renewal. They turned it around in days — proper paperwork, no surprises.",
+      "rating": 5,
+      "service": "Annual Returns",
+      "year": 2025,
+      "featured": true
+    },
+    {
+      "id": "tomi-2024",
+      "name": "Tomi A.",
+      "role": "Trustee, Mustard Seed Foundation",
+      "location": "Abuja, NG",
+      "quote": "Incorporated Trustees registration is dense. LARIAL walked us through every step — constitution, publication, filings. We're now fully recognised.",
+      "rating": 5,
+      "service": "Incorporated Trustees",
+      "year": 2024,
+      "featured": true
+    },
+    {
+      "id": "kelechi-2025",
+      "name": "Kelechi N.",
+      "role": "CEO, Bytestack Studio",
+      "location": "Remote (London ↔ Lagos)",
+      "quote": "Hired LARIAL for CAC registration and stayed for the software build. Their team shipped our internal ops tool faster than agencies I've used in London.",
+      "rating": 5,
+      "service": "Software Development",
+      "year": 2025,
+      "featured": true
+    },
+    {
+      "id": "halima-2024",
+      "name": "Halima B.",
+      "role": "Owner, Halima Studio",
+      "location": "Kano, NG",
+      "quote": "BN registration without leaving my shop — they sent the checklist on WhatsApp and that was it.",
+      "rating": 5,
+      "service": "Business Name Registration (BN)",
+      "year": 2024,
+      "featured": false
+    },
+    {
+      "id": "chinedu-2025",
+      "name": "Chinedu E.",
+      "role": "Co-founder, Pathway HQ",
+      "location": "Diaspora — Toronto, CA",
+      "quote": "I was registering a Nigerian entity from Canada. LARIAL made it feel local — same-day responses, real updates, certificate in my inbox.",
+      "rating": 5,
+      "service": "Company Registration (LTD)",
+      "year": 2025,
+      "featured": true
+    }
+  ]
+}
