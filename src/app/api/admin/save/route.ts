@@ -229,48 +229,52 @@ export async function POST(req: Request) {
   const msg = `admin: update site content (${new Date().toISOString()})`;
 
   try {
-    await Promise.all([
-      putFile({
+    const writes = [
+      {
         repo,
         branch,
         token,
         path: "content/settings.json",
         content: settingsJson,
         message: msg,
-      }),
-      putFile({
+      },
+      {
         repo,
         branch,
         token,
         path: "content/services.json",
         content: servicesJson,
         message: msg,
-      }),
-      putFile({
+      },
+      {
         repo,
         branch,
         token,
         path: "content/jobs.json",
         content: jobsJson,
         message: msg,
-      }),
-      putFile({
+      },
+      {
         repo,
         branch,
         token,
         path: "content/testimonials.json",
         content: testimonialsJson,
         message: msg,
-      }),
-      putFile({
+      },
+      {
         repo,
         branch,
         token,
         path: "content/works.json",
         content: worksJson,
         message: msg,
-      }),
-    ]);
+      },
+    ];
+
+    for (const write of writes) {
+      await putFile(write);
+    }
 
     return Response.json({ ok: true });
   } catch (e: unknown) {
