@@ -1,0 +1,176 @@
+[
+  {
+    "type": "pageview",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:36:19.278Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:37:19.422Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:38:19.417Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:39:19.415Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:40:19.422Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:41:19.436Z"
+  },
+  {
+    "type": "pageview",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "fafec9dd-f397-4a42-8cd9-49b77cc9779f",
+    "timestamp": "2026-05-30T11:42:18.373Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:42:19.400Z"
+  },
+  {
+    "type": "click",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "fafec9dd-f397-4a42-8cd9-49b77cc9779f",
+    "timestamp": "2026-05-30T11:42:25.692Z",
+    "meta": {
+      "label": "Admin",
+      "href": "http://localhost:3000/admin",
+      "tag": "a"
+    }
+  },
+  {
+    "type": "click",
+    "path": "/admin",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "fafec9dd-f397-4a42-8cd9-49b77cc9779f",
+    "timestamp": "2026-05-30T11:43:29.208Z",
+    "meta": {
+      "label": "Loading...",
+      "tag": "button"
+    }
+  },
+  {
+    "type": "click",
+    "path": "/admin",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "fafec9dd-f397-4a42-8cd9-49b77cc9779f",
+    "timestamp": "2026-05-30T11:43:43.481Z",
+    "meta": {
+      "label": "Loading...",
+      "tag": "button"
+    }
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:43:56.490Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:44:56.518Z"
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:45:38.419Z"
+  },
+  {
+    "type": "click",
+    "path": "/admin",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "fafec9dd-f397-4a42-8cd9-49b77cc9779f",
+    "timestamp": "2026-05-30T11:45:55.184Z",
+    "meta": {
+      "label": "Loading...",
+      "tag": "button"
+    }
+  },
+  {
+    "type": "click",
+    "path": "/admin",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "fafec9dd-f397-4a42-8cd9-49b77cc9779f",
+    "timestamp": "2026-05-30T11:45:57.925Z",
+    "meta": {
+      "label": "Analytics",
+      "tag": "button"
+    }
+  },
+  {
+    "type": "heartbeat",
+    "path": "/",
+    "referrer": "",
+    "source": "direct",
+    "visitorId": "494fbc1c-8a80-450f-af47-d6d086fa959d",
+    "sessionId": "760aa8a6-f81b-4a77-9f91-9edc217a4faf",
+    "timestamp": "2026-05-30T11:46:56.476Z"
+  }
+]
