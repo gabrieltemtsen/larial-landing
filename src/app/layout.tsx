@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -65,6 +66,7 @@ export default function RootLayout({
       className={`${inter.variable} ${manrope.variable} min-h-full antialiased`}
     >
       <body className="min-h-full bg-white text-slate-900">
+        <AnalyticsTracker />
         {children}
       </body>
     </html>

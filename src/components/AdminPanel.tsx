@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { AnalyticsDashboard } from "@/components/AnalyticsDashboard";
 import type {
   Job,
   Service,
@@ -87,10 +88,13 @@ function Textarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
   );
 }
 
+type AdminTab = "content" | "analytics";
+
 export function AdminPanel() {
   const [pin, setPin] = useState("");
   const [authed, setAuthed] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState<AdminTab>("content");
   const [publishing, setPublishing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
@@ -290,7 +294,28 @@ export function AdminPanel() {
   if (!settings) return null;
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
+      {/* Tab bar */}
+      <div className="flex gap-1 rounded-2xl border border-slate-200 bg-slate-50 p-1 w-fit">
+        {(["content", "analytics"] as AdminTab[]).map((tab) => (
+          <button
+            key={tab}
+            type="button"
+            onClick={() => setActiveTab(tab)}
+            className={`rounded-xl px-5 py-2 text-sm font-semibold capitalize transition-colors ${
+              activeTab === tab
+                ? "bg-white text-slate-900 shadow-sm"
+                : "text-slate-500 hover:text-slate-700"
+            }`}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === "analytics" && <AnalyticsDashboard pin={pin} />}
+
+      {activeTab === "content" && <div className="space-y-10">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="text-sm text-slate-600">
           You can <span className="font-semibold">Save Draft</span> on this device,
@@ -1089,6 +1114,7 @@ export function AdminPanel() {
           ))}
         </div>
       </SectionCard>
+    </div>}
     </div>
   );
 }

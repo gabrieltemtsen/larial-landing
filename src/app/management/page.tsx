@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -96,14 +96,28 @@ export default function ManagementPage() {
               <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-sky-200/60 via-white to-indigo-200/60 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_30px_80px_-30px_rgba(2,132,199,0.45)]">
                 <div className="relative aspect-[3/4] w-full bg-gradient-to-br from-slate-100 to-slate-200">
-                  <Image
+                  {/* <Image
                     src="/team/general-manager.jpg"
                     alt="General Manager — LARIAL LTD"
                     fill
                     sizes="(min-width: 1024px) 420px, 90vw"
                     className="object-cover"
                     priority
-                  />
+                  /> */}
+                  {/* Default avatar placeholder */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      className="h-32 w-32 text-slate-300"
+                    >
+                      <circle cx="12" cy="8" r="4" />
+                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                    </svg>
+                  </div>
                   <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
                     <div>
